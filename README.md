@@ -14,20 +14,20 @@ See the [notebook](./Practical5.ipynb) for details.
 Out of the 4 batch sizes tested (50, 100, 200, 400), the lowest is consistently getting higher accuracy and lower loss values. This is expected since a smaller number of values are passed through the network each time, meaning it backpropagates more times for a fixed data set. While this is good, it comes with the trade off of run speed. It took significantly longer to run each network with smaller batch sizes.
 
 ### Learning rate
-You may have noticed I am using default learning rates, this because in my preliminary tests I found it very hard to find good learning rates. This lead me to instead use default values, which have been proven to work well with their respective optimizers.
+You may have noticed I am using default learning rates, this is because in my preliminary tests I found it very hard to find good learning rates. This lead me to instead use default values, which have been proven to work well with their respective optimizers.
 
 ### Dropout
 Using dropout layers seems to reduce train accuracy for the shallow network, but increase it for the deeper network.
 
-Dropout is designed to reduce overfitting in DNNs by reducing the importance of any given neuron. Given this, it makes sense for a shallow network to perform worse with dropout layers, or even deep networks if drop is used in the first couple layers. This is because even fairly basic features are being dropped, hence making it perform worse.
+Dropout is designed to reduce overfitting in DNNs by reducing the importance of any given neuron. Given this, it makes sense for a shallow network to perform worse with dropout layers, or even deep networks if dropout is used in the first couple of layers. This is because even fairly basic features are being dropped, hence making it perform worse.
 
 Dropout doesn't affect the DNN that much, indicating there isn't any significant overfitting.
 
 ### Number of Hidden Layers & Hidden layer width
-In general, adding more hidden layers increases accuracy and lowers loss. The network is able to draw more complex relationships with more hidden layers. With this extra information, it is able to more accurately make classification in the dataset.
+In general, adding more hidden layers increases accuracy and lowers loss. The network is able to draw more complex relationships with more hidden layers. With this extra information, it is able to more accurately make classifications in the dataset.
 
 ### Activation Functions
-In my preliminary research, one of the things I tried were different activation functions, e.g. elu, sigmoid, but universally it made the results worse. I believe this is for various reasons, mainly because the dataset is relatively small compared with real world data sets.
+In my preliminary research, one of the things I tried was different activation functions, e.g. elu, sigmoid, but universally it made the results worse. I believe this is for various reasons, mainly because the dataset is relatively small compared with real world data sets.
 
 
 ## Final model
